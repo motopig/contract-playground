@@ -10,8 +10,13 @@ ffi = false
 fs_permissions = [{ access = "read", path = "./"}]
 
 remappings = [
-    "@openzeppelin/contracts/=dependencies/@openzeppelin-contracts-5.6.0/",
-    "@account-abstraction/contracts/=dependencies/account-abstraction-0.9.0/contracts/"
+    "@openzeppelin/contracts/=dependencies/@openzeppelin-contracts-5.6.1/",
+    "account-abstraction-0.9.0/=dependencies/account-abstraction-0.9.0/",
+    "@account-abstraction/=dependencies/account-abstraction-0.9.0/",
+    "@openzeppelin-contracts-5.6.1/=dependencies/@openzeppelin-contracts-5.6.1/",
+    "openzeppelin-contracts/contracts/=dependencies/@openzeppelin-contracts-5.6.1/",
+    "forge-std/=dependencies/forge-std-1.15.0/src/",
+    "forge-std-1.15.0/=dependencies/forge-std-1.15.0/"
 ]
 
 [soldeer]
@@ -19,9 +24,9 @@ remappings_generate = true
 remappings_regenerate = true
 
 [dependencies]
-"@openzeppelin-contracts" = "5.6.0"
+"@openzeppelin-contracts" = "5.6.1"
 "account-abstraction" = { version = "0.9.0", url = "https://github.com/eth-infinitism/account-abstraction/archive/refs/tags/v0.9.0.zip" }
-forge-std = "1.9.6"
+forge-std = "latest"
 
 [rpc_endpoints]
 mainnet = "${MAINNET_RPC_URL}"
